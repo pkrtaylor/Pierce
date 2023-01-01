@@ -1,0 +1,34 @@
+[
+
+    
+    {
+        "id": "1f62d084-cc32-4c7b-943d-417c5dac896e",
+        "name" : "Tribe Market NYC",
+        "desc" : {
+            "title" : "Software Engineer",
+            "timeWorked": "July 2022 - Nov 2022",
+            "workDesc" : [
+                "Designed a web application that allows users to claim NFTs of clothing, after they have purchased the physical clothing.",
+                " Researched the third web library and analyzed its documentation, in order to implement third webfeatures with React.",
+                " Utilized web service Openzeppelin defender in order to achieve gasless fees for the customers. "
+                ]
+        }
+    },
+    {
+        "id": "c9613c41-32f0-435e-aef2-b17ce758431b",
+        "name" : "Hacware",
+        "desc" : {
+            "title" : "Software Engineer Intern",
+            "timeWorked": "June 2020 - Dec 2020",
+            "workDesc" : [
+                "Enhanced functionality of company website/application and augmented UI to optimize user experience.Testing of the application was done on google cloud virtual server.",
+                " Utilized Postman to test the status of API endpoints and documented them using API doc. Listing the parameters, datatypes, and example of correct and incorrect returns.",
+                " Researched python libraries that connect with Multiple Microsoft API’s, to create scripts. Created andpublished blogs on how to use the script and what it does. "
+                ]
+        }
+    }
+    
+
+
+]
+
