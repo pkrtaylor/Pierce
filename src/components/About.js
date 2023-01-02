@@ -238,9 +238,9 @@ const About = () => {
           <Bottom>
             <PassageContainer>
               <PassageInner>
-              <P>Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!</P>
-              <P>Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.</P>
-              <P>I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.</P>
+              <P>Hello! My name is Pierce and one thing I love doing is making ideas come alive on the internet. My Interest for web development started small with a little suggestion from an older cousin, while in high school. This then turned into a something more when I entered college. It was there, I fell in love with the world of software.</P>
+              <P>Coming back to the present, I have had the priviledge of working with a start up tech company, graduating college with a computer science degree and more. My main focus these days is staying up to date on software development topics, while also trying to start my career in tech.</P>
+              <P>I also, recently had the opportunity to work with a clothing brand that combines fashion and tech to give users a whole new experience. </P>
               <P>Here are a few technologies I’ve been working with recently:</P>
               <ul>
                 <li>JavaScript (ES6+)</li>

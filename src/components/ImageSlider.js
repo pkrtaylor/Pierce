@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import image from '../images/DC1_3.png'
+
 const Slider = styled.div`
 
   height: 100%;
@@ -20,8 +20,8 @@ const Slide = styled.div`
   background-size: cover;
   //background-image: ${({currentSlides, currentIndex}) => (`url(${currentSlides[currentIndex].url})`)};
   background-image: ${({currentSlides, currentIndex}) => (currentSlides.length > 0 ? (`url(${currentSlides[currentIndex].url})`): '')};
-  //background-image: url(${image}) 
-   //background-image: ${({currentSlides, currentIndex}) => (currentSlides.length > 0 ? (`url(${image})`): '')};
+  
+   
  //background-image: url("/images/DC1_3.png");
  //note to self : make sure image are in public folder, you dont even have to add the ../ just /foldername/imagename.png for path
 

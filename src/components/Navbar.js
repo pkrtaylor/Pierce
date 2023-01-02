@@ -19,6 +19,7 @@ const Nav = styled.nav`
    top: 0;
    z-index: 10;
    //font-size: 1rem;
+   
 
    @media screen and (max-width: 960px){
     transition: 0.8s all ease;

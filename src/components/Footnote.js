@@ -22,12 +22,13 @@ const Text = styled.div`
   
   &:hover{
     color:#FF0000;
+    transition: 0.5s ease;
   }
 `
 const Footnote = () => {
   return (
     <Container>
-    <a href='' rel='noopener noreferrer' target="_blank">
+    <a href='https://github.com/pkrtaylor/Pierce' rel='noopener noreferrer' target="_blank">
       <Text clas>
       Designed & Built by Pierce Ruddock Taylor
       </Text>

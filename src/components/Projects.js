@@ -70,7 +70,7 @@ const Projects = () => {
                 <Header>Some Things I've Built</Header>
             </Top>
             {
-                projects.map(({id, name, img, desc, tools, slides})=>{
+                projects.map(({id, name, img, desc, tools, slides, github, elink})=>{
 
                         const toggleLeftOrRight = parseInt(id) % 2 === 0 ? true : false;
                         //true is right, left is false
@@ -82,6 +82,8 @@ const Projects = () => {
                         desc={desc}
                         tools={tools}
                         slides={slides}
+                        github={github}
+                        elink={elink}
                         toggleLeftOrRight={toggleLeftOrRight}/>
                     )
                 })

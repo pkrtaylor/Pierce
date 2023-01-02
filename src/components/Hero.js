@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Container = styled.div`
 
     min-height: 100vh;
-   
+    
     
     background-color: #0a192f;
     display: flex;
@@ -63,7 +63,7 @@ const HeroSection = () => {
         <Wrapper>
           <h1 className='firstLine'>Hi, my name is</h1>
           <h2 className='secondLine'>Pierce Ruddock.</h2>
-          <h2 className='thirdLine'>I build things for the web.</h2>
+          <h2 className='thirdLine'>I make ideas come to life on the web.</h2>
           <p className='fourthLine'>I'm a software engineer that speacializes creating digital experiences. Currently, I'm focused on landing a position as a frontend developer at an amazing company.</p>
         </Wrapper>
     </Container>

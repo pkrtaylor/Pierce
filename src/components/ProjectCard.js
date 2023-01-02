@@ -100,6 +100,9 @@ const Icons = styled.div`
     justify-content: space-between;
     align-items: center;
     
+    a{
+        color: #ccd6f6;
+    }
 
 `
 
@@ -120,7 +123,7 @@ const ExternalLinkIcon = styled(FiExternalLink)`
     }
 `
 
-const ProjectCard = ({image, name, desc, tools, slides, toggleLeftOrRight}) => {
+const ProjectCard = ({name, desc, tools, slides, toggleLeftOrRight, elink, github}) => {
   return (
     <Container >
         <Picture  toggleLeftOrRight={toggleLeftOrRight}>
@@ -139,8 +142,12 @@ const ProjectCard = ({image, name, desc, tools, slides, toggleLeftOrRight}) => {
             }
             </Tools>
             <Icons>
+            <a href={github}>
             <GithubIcon/>
+            </a>
+            <a href={elink}>
             <ExternalLinkIcon/>
+            </a>
             </Icons>
         </Description>
     </Container>

@@ -6,6 +6,7 @@ import pdf from '../Resume_2023.pdf'
 const Container = styled.section`
 
   height: 700px;
+  
   background-color: #0a192f;
   display: flex;
   justify-content: center;

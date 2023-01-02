@@ -2,15 +2,17 @@
     {
         "id": "0",
         "name" : "Dev-Connector",
-        "img" : "The application was made with the idea to mimic a form of social media. The theme chosen for this was a place for developers to connect. A user can create posts, comments and look at list of other developers.",
-        "desc" : "The application was made with the idea to mimic a form of social media. The theme chosen for this was aplace for developers to connect. A user can create posts, comments and look at list of other developers.",
+        "img" : "",
+        "desc" : "The application was made with the idea to mimic a form of social media. The theme chosen for this was a place for developers to connect. A user can create posts, comments and look at list of other developers.",
         "tools": ["React", "Node", "Express", "Redux", "MongoDB"],
         "slides": [
             {"url" : "../images/DC1_3.png", "title": "DC1_3"},
             {"url" : "../images/DC2_2.png", "title": "DC2"},
             {"url" : "../images/DC3_2.png", "title": "DC3"},
             {"url" : "../images/DC4_2.png", "title": "DC4"}
-        ]
+        ],
+        "github" : "https://github.com/pkrtaylor/Dev-Connector/tree/third",
+        "elink" : ""
         
     },
     {
@@ -23,7 +25,10 @@
             {"url" : "../images/TMNYC1_2.png", "title": "TMNYC1_2"},
             {"url" : "../images/TMNYC2_2.png", "title": "TMNYC2"},
             {"url" : "../images/TMNYC4_4.png", "title": "TMNYC4"}
-        ]
+        ],
+        "github" : "https://github.com/pkrtaylor/ClaimDigital/tree/magictest",
+        "elink" : "https://claim.tmnyc.com/"
+
     },
     {
         "id": "2",
@@ -35,7 +40,9 @@
             {"url" : "../images/GMN1_2.png", "title": "GMN1_2"},
             {"url" : "../images/GMN2_2.png", "title": "GMN2_2"},
             {"url" : "../images/GMN3_2.png", "title": "GMN3_2"}
-        ]
+        ],
+        "github" : "https://github.com/pkrtaylor/GuessTheNumber",
+        "elink": ""
     }
     
 ]
