@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {TfiClose} from 'react-icons/tfi'
 import Logo from './Logo'
-import { Link as LinkS} from 'react-scroll'
+import { Link as LinkS, animateScroll as scroll} from 'react-scroll'
 import pdf from '../Resume_2023.pdf'
 
 
@@ -110,9 +110,13 @@ const NavButton = styled.a`
 
 
 const SideBar = ({toggle, isOpen}) => {
+
+    const toggleHome = () =>{
+        scroll.scrollToTop();
+    }
   return (
     <Container onClick={toggle} isOpen={isOpen}>
-        <Crest>
+        <Crest onClick={()=>{ toggle(); toggleHome();}}>
             <Logo/>
         </Crest>
         <Icon onClick={toggle}>
