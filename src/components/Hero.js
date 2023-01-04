@@ -64,7 +64,7 @@ const HeroSection = () => {
           <h1 className='firstLine'>Hi, my name is</h1>
           <h2 className='secondLine'>Pierce Ruddock.</h2>
           <h2 className='thirdLine'>I make ideas come to life on the web.</h2>
-          <p className='fourthLine'>I'm a software engineer that speacializes in creating digital experiences. Currently, I'm focused on landing a position as a frontend developer at an amazing company.</p>
+          <p className='fourthLine'>I am a front-end developer with a strong foundation in creating intuitive and engaging user interfaces. I am looking for a company where I can work on challenging projects and continue to develop my skills, with a long-term goal of becoming a full-stack developer.</p>
         </Wrapper>
     </Container>
   )

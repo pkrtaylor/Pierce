@@ -238,10 +238,9 @@ const About = () => {
           <Bottom>
             <PassageContainer>
               <PassageInner>
-              <P>Hello! My name is Pierce and one thing I love doing is making ideas come alive on the internet. My Interest for web development started small with a little suggestion from an older cousin, while in high school. This then turned into a something more when I entered college. It was there, I fell in love with the world of software.</P>
-              <P>Coming back to the present, I have had the priviledge of working with a start up tech company, graduating college with a computer science degree and more. My main focus these days is staying up to date on software development topics, while also trying to start my career in tech.</P>
-              <P>I also, recently had the opportunity to work with a clothing brand that combines fashion and tech to give users a whole new experience. </P>
-              <P>Here are a few technologies I’ve been working with recently:</P>
+              <P>As a passionate and driven software developer, I am excited to bring ideas to life on the internet. My interest in web development was sparked by an older cousin in high school and grew into a true love during college.</P>
+              <P> I have had the privilege of working with a start-up tech company and recently had the opportunity to contribute to a clothing brand that merges fashion and tech to provide a unique user experience. I hold a degree in computer science and am committed to staying up-to-date on the latest software development trends.</P>
+              <P>Here are a few technologies I am proficient in:</P>
               <ul>
                 <li>JavaScript (ES6+)</li>
                 <li>React</li>
