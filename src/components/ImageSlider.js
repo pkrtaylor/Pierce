@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import image from '../images/DC1_3.png'
 const Slider = styled.div`
@@ -18,7 +18,7 @@ const Slide = styled.div`
 
   background-position: center;
   background-size: cover;
-  //background-image: ${({currentSlides, currentIndex}) => (`url(${currentSlides[currentIndex].url})`)};
+  //ckground-image: ${({currentSlides, currentIndex}) => (`url(${currentSlides[currentIndex].url})`)};
   background-image: ${({currentSlides, currentIndex}) => (currentSlides.length > 0 ? (`url(${currentSlides[currentIndex].url})`): '')};
   //background-image: url(${image}) 
    //background-image: ${({currentSlides, currentIndex}) => (currentSlides.length > 0 ? (`url(${image})`): '')};
@@ -55,7 +55,24 @@ const ImageSlider = ({slides}) => {
   const gotToSlide = (slideIndex) =>{
 
     setCurrentIndex(slideIndex);
+    console.log(currentIndex)
   }
+
+  const nextSlide = () =>{
+
+    const isLastSlide = currentIndex === slides.length -1
+    const newIndex = isLastSlide ? 0 : currentIndex + 1
+    setCurrentIndex(newIndex) 
+    
+  }
+
+  useEffect(()=>{
+    const interval = setInterval(() =>{
+      nextSlide();
+    }, 4000);
+    return () => clearInterval(interval);
+  },[currentIndex])
+
   return (
     <Slider>
       <Slide currentSlides={slides} currentIndex={currentIndex}>

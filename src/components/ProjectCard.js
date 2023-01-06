@@ -12,6 +12,7 @@ const Container = styled.div`
     min-height: 370px;
     position: relative;
     display: grid;
+    margin-bottom: 100px;
     
 
     @media screen and (max-width: 800px){
@@ -123,13 +124,14 @@ const ExternalLinkIcon = styled(FiExternalLink)`
 const ProjectCard = ({image, name, desc, tools, slides, toggleLeftOrRight}) => {
 
     const { ref: ref1, inView: seeRef1} = useInView({triggerOnce: true});
+    const { ref: ref2, inView: seeRef2} = useInView({triggerOnce: true});
     
   return (
-    <Container ref={ref1} className={seeRef1 ? 'show' : 'hiddenRight'} >
-        <Picture  toggleLeftOrRight={toggleLeftOrRight}>
+    <Container>
+        <Picture ref={ref1} className={seeRef1 ? 'show' : (toggleLeftOrRight ? 'hiddenLeft' : 'hiddenRight')} toggleLeftOrRight={toggleLeftOrRight}>
             <ImageSlider slides={slides}/>  
         </Picture>
-        <Description toggleLeftOrRight={toggleLeftOrRight}>
+        <Description ref={ref2} className={seeRef2 ? 'showY' : 'hiddenDown'} toggleLeftOrRight={toggleLeftOrRight}>
             <ProjectName>{name}</ProjectName>
             <Desc toggleLeftOrRight={toggleLeftOrRight}>{desc}</Desc>
             <Tools toggleLeftOrRight={toggleLeftOrRight}>

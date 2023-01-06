@@ -65,11 +65,7 @@ const Header = styled.h2`
 const Projects = () => {
 
   
-   useEffect(()=>{
-    const observer = new IntersectionObserver((entries)=>{
-
-    })
-   })
+   
     
     
   return (
