@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {FiGithub} from 'react-icons/fi'
 import {FiExternalLink} from 'react-icons/fi'
 import ImageSlider from './ImageSlider'
-
+import { useInView } from 'react-intersection-observer';
 
 
 const Container = styled.div`
@@ -121,8 +121,11 @@ const ExternalLinkIcon = styled(FiExternalLink)`
 `
 
 const ProjectCard = ({image, name, desc, tools, slides, toggleLeftOrRight}) => {
+
+    const { ref: ref1, inView: seeRef1} = useInView({triggerOnce: true});
+    
   return (
-    <Container >
+    <Container ref={ref1} className={seeRef1 ? 'show' : 'hiddenRight'} >
         <Picture  toggleLeftOrRight={toggleLeftOrRight}>
             <ImageSlider slides={slides}/>  
         </Picture>

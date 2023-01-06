@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { useInView } from 'react-intersection-observer';
+import Typewriter from 'typewriter-effect'
 
 const Container = styled.div`
 
@@ -58,13 +59,41 @@ const Wrapper = styled.div`
 
 
 const HeroSection = () => {
+  const { ref: ref1, inView: seeRef1,} = useInView({
+    triggerOnce: true
+  });
+  const { ref: ref2, inView: seeRef2} = useInView({
+    triggerOnce: true
+  });
+  
+
+
+
   return (
     <Container>
         <Wrapper>
-          <h1 className='firstLine'>Hi, my name is</h1>
+          <div ref={ref1} className={seeRef1 ? 'show' : 'hiddenLeft'}>
+          <h1 className='firstLine'>
+            <Typewriter
+            options={{
+              loop: true,
+            }}
+              onInit={(typewriter) =>{
+                typewriter
+                .pauseFor(1000)
+                .typeString("Hi, my name is")
+                .pauseFor(5000)
+                .deleteAll()
+                .start()
+              }}
+            />
+          </h1>
           <h2 className='secondLine'>Pierce Ruddock.</h2>
+          </div>
+          <div ref={ref2} className={seeRef2 ? 'show' : 'hiddenRight'} >
           <h2 className='thirdLine'>I build things for the web.</h2>
           <p className='fourthLine'>I'm a software engineer that speacializes creating digital experiences. Currently, I'm focused on landing a position as a frontend developer at an amazing company.</p>
+          </div>
         </Wrapper>
     </Container>
   )

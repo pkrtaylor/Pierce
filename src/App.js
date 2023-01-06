@@ -7,9 +7,7 @@ import styled from 'styled-components';
 
 
 
-const AppContainer =styled.div`
-  overflow: hidden;
-`
+
 
 
 
@@ -31,9 +29,11 @@ function App() {
   
 
   return (
-    <AppContainer>
-      {display}
-    </AppContainer>
+    
+      <div className='app'>
+        {display}
+      </div>
+    
   );
 }
 

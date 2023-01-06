@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import pdf from '../Resume_2023.pdf'
-
+import { useInView } from 'react-intersection-observer';
 
 const Container = styled.section`
 
@@ -84,12 +84,15 @@ const ButtonContainer = styled.div`
 
 
 const Contact = () => {
+  const { ref: ref1, inView: seeRef1} = useInView({triggerOnce: true});
+  const { ref: ref2, inView: seeRef2} = useInView({triggerOnce: true});
+  const { ref: ref3, inView: seeRef3} = useInView({triggerOnce: true});
   return (
     <Container id='contact'>
       <Wrapper>
-        <Heading>Get In Touch</Heading>
-        <Text>I’m currently looking for new work opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll definetly get back to you!</Text>
-        <ButtonContainer>
+        <Heading ref={ref1} className={seeRef1 ? 'showY' : 'hiddenDown'}>Get In Touch</Heading>
+        <Text ref={ref2} className={seeRef2 ? 'showY' : 'hiddenDown' }>I’m currently looking for new work opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll definetly get back to you!</Text>
+        <ButtonContainer ref={ref3} className={seeRef3 ? 'showY' : 'hiddenDown' } >
           <ContactButton href="mailto:ruddockpierce@gmail.com" rel="noopener noreferrer" target="_blank">Say Hello</ContactButton>
           <ContactButton href={pdf} target="_blank">Resume</ContactButton>
         </ButtonContainer>
