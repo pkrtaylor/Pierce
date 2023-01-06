@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import Logo from './Logo'
 import { Link as LinkScroll, animateScroll as scroll } from 'react-scroll'
@@ -21,6 +21,10 @@ const Nav = styled.nav`
    //font-size: 1rem;
    
 
+   &.active{
+    background-color: rgba(10, 25, 47,0.5); 
+    backdrop-filter: blur(5px);
+   }
    @media screen and (max-width: 960px){
     transition: 0.8s all ease;
    }
@@ -101,13 +105,14 @@ const NavLinks = styled(LinkScroll)`
     height: 100%;
     cursor: pointer;
     
-    &:active {
+  
+    /* &.active {
         color: #FF0000;
         border-bottom: 3px solid #FF0000;
         transition: .2s ease-in-out;
 
         
-    }
+    } */
 
     &:hover{
         color: #FF0000;
@@ -146,9 +151,22 @@ const Navbar = ({toggle}) => {
     const toggleHome = () =>{
         scroll.scrollToTop();
     }
+
+    const [navbar, setNavbar] = useState(false);
+
+    const changeBackground = () =>{
+        if(window.scrollY >= 80){
+            setNavbar(true)
+        } else {
+            setNavbar(false)
+        }
+    }
+    console.log(navbar)
+
+    window.addEventListener('scroll', changeBackground)
   return (
     <>
-        <Nav>
+        <Nav className={navbar ? 'active' : ''}>
             <NavContainer>
                     <NavLogo to='/' onClick={toggleHome}>
                         <Logo/>
@@ -192,7 +210,7 @@ const Navbar = ({toggle}) => {
                             duration={500}
                             spy={true}
                             exact='true'
-                            offset={-80}
+                            offset={80}
                             activeClass="active">Contact</NavLinks>
                         </NavItem>
                         <NavButton href={pdf} target="_blank">Resume</NavButton>

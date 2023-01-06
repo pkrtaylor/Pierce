@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {FiGithub} from 'react-icons/fi'
 import {FiExternalLink} from 'react-icons/fi'
 import ImageSlider from './ImageSlider'
-
+import { useInView } from 'react-intersection-observer';
 
 
 const Container = styled.div`
@@ -12,6 +12,7 @@ const Container = styled.div`
     min-height: 370px;
     position: relative;
     display: grid;
+    margin-bottom: 100px;
     
 
     @media screen and (max-width: 800px){
@@ -124,12 +125,17 @@ const ExternalLinkIcon = styled(FiExternalLink)`
 `
 
 const ProjectCard = ({name, desc, tools, slides, toggleLeftOrRight, elink, github}) => {
+
+
+    const { ref: ref1, inView: seeRef1} = useInView({triggerOnce: true});
+    const { ref: ref2, inView: seeRef2} = useInView({triggerOnce: true});
+    
   return (
-    <Container >
-        <Picture  toggleLeftOrRight={toggleLeftOrRight}>
+    <Container>
+        <Picture ref={ref1} className={seeRef1 ? 'show' : (toggleLeftOrRight ? 'hiddenLeft' : 'hiddenRight')} toggleLeftOrRight={toggleLeftOrRight}>
             <ImageSlider slides={slides}/>  
         </Picture>
-        <Description toggleLeftOrRight={toggleLeftOrRight}>
+        <Description ref={ref2} className={seeRef2 ? 'showY' : 'hiddenDown'} toggleLeftOrRight={toggleLeftOrRight}>
             <ProjectName>{name}</ProjectName>
             <Desc toggleLeftOrRight={toggleLeftOrRight}>{desc}</Desc>
             <Tools toggleLeftOrRight={toggleLeftOrRight}>

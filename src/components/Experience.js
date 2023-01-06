@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import workHistory from '../workHistory'
-
+import { useInView } from 'react-intersection-observer';
 
 const Container = styled.section`
 
@@ -262,13 +262,15 @@ const Experience = () => {
   }
   console.log(spotLight)
 
+  const { ref: ref1, inView: seeRef1} = useInView({triggerOnce: true});
+  const { ref: ref2, inView: seeRef2} = useInView({triggerOnce: true});
   return (
     <Container id='experience'>
       <Wrapper>
         <Top>
-          <Heading>Where I've Worked</Heading>
+          <Heading ref={ref1} className={seeRef1 ? 'show' : 'hiddenLeft'}>Where I've Worked</Heading>
         </Top>
-        <Bottom>
+        <Bottom  ref={ref2} className={seeRef2 ? 'show' : 'hiddenRight'}>
           <LeftB>
              <JobList>
               {

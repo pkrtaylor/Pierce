@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import ProjectCard from './ProjectCard'
 import projects from '../projects.json'
+
+
 
 const Container = styled.section`
     min-height: 100vh;
@@ -62,6 +64,9 @@ const Header = styled.h2`
 `
 const Projects = () => {
 
+  
+   
+    
     
   return (
     <Container id='projects'>
@@ -76,6 +81,7 @@ const Projects = () => {
                         //true is right, left is false
                     return(
                         <ProjectCard 
+        
                         key={id}
                         name={name}
                         img={img}

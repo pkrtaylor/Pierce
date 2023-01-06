@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { useInView } from 'react-intersection-observer';
+import Typewriter from 'typewriter-effect'
 
 const Container = styled.div`
 
@@ -58,13 +59,41 @@ const Wrapper = styled.div`
 
 
 const HeroSection = () => {
+  const { ref: ref1, inView: seeRef1,} = useInView({
+    triggerOnce: true
+  });
+  const { ref: ref2, inView: seeRef2} = useInView({
+    triggerOnce: true
+  });
+  
+
+
+
   return (
     <Container>
         <Wrapper>
-          <h1 className='firstLine'>Hi, my name is</h1>
+          <div ref={ref1} className={seeRef1 ? 'show' : 'hiddenLeft'}>
+          <h1 className='firstLine'>
+            <Typewriter
+            options={{
+              loop: true,
+            }}
+              onInit={(typewriter) =>{
+                typewriter
+                .pauseFor(1000)
+                .typeString("Hi, my name is")
+                .pauseFor(5000)
+                .deleteAll()
+                .start()
+              }}
+            />
+          </h1>
           <h2 className='secondLine'>Pierce Ruddock.</h2>
+          </div>
+          <div ref={ref2} className={seeRef2 ? 'show' : 'hiddenRight'} >
           <h2 className='thirdLine'>I make ideas come to life on the web.</h2>
           <p className='fourthLine'>I am a front-end developer with a strong foundation in creating intuitive and engaging user interfaces. I am looking for a company where I can work on challenging projects and continue to develop my skills, with a long-term goal of becoming a full-stack developer.</p>
+          </div>
         </Wrapper>
     </Container>
   )

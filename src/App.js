@@ -2,14 +2,10 @@ import './App.css';
 import React, { useState} from 'react';
 import LoaderCrest from './components/LoaderCrest';
 import MainPage from './components/MainPage';
-import styled from 'styled-components';
 
 
 
 
-const AppContainer =styled.div`
-  overflow: clip;
-`
 
 
 
@@ -31,9 +27,11 @@ function App() {
   
 
   return (
-    <AppContainer>
-      {display}
-    </AppContainer>
+    
+      <div className='app'>
+        {display}
+      </div>
+    
   );
 }
 

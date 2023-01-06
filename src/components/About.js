@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import selfie from '../images/selfie_2.png'
-
+import { useInView } from 'react-intersection-observer';
 
 
 const Container = styled.section`
 
   width: 100%;
   min-height: 100vh;
-  background-color: #0a192f;
+  background-color: rgb(10, 25, 47);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,32 +38,8 @@ const Top = styled.div`
  justify-content: center;
  max-width: 540px;
  
- 
- 
-
-
-`
-
-
-const Bottom = styled.div`
-display: flex;
-
-
-@media screen and (max-width: 800px){
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        
-    }
-
-`
-
-
-const Header = styled.h2`
-
-    color: #ccd6f6;
+ .header {
+  color: #ccd6f6;
     margin-top: 10px;
     margin-bottom: 40px;
     font-size: 32px;
@@ -88,10 +64,31 @@ const Header = styled.h2`
 
       }
       }
-
+ }
+ 
+ 
 
 
 `
+
+
+const Bottom = styled.div`
+display: flex;
+
+
+@media screen and (max-width: 800px){
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+`
+
+
+
 
 
 
@@ -225,18 +222,18 @@ const Image2 = styled.img`
 
 
 const About = () => {
-
+  const { ref: ref1, inView: seeRef1} = useInView({triggerOnce: true});
+  const { ref: ref2, inView: seeRef2} = useInView({triggerOnce: true});
+  const { ref: ref3, inView: seeRef3} = useInView({triggerOnce: true});
 
   return (
     <Container id='about'>
       <Wrapper>
           <Top>
-            <Header>
-              About Me
-            </Header>
+            <h2 ref={ref1} className={`header ${seeRef1 ? 'show' : 'hiddenLeft'}`}>About Me</h2>
           </Top>
           <Bottom>
-            <PassageContainer>
+            <PassageContainer ref={ref2} className={seeRef2 ? 'show' : 'hiddenLeft'}>
               <PassageInner>
               <P>As a passionate and driven software developer, I am excited to bring ideas to life on the internet. My interest in web development was sparked by an older cousin in high school and grew into a true love during college.</P>
               <P> I have had the privilege of working with a start-up tech company and recently had the opportunity to contribute to a clothing brand that merges fashion and tech to provide a unique user experience. I hold a degree in computer science and am committed to staying up-to-date on the latest software development trends.</P>
@@ -251,7 +248,7 @@ const About = () => {
               </ul>
               </PassageInner>
             </PassageContainer>
-            <Selfie>
+            <Selfie ref={ref3} className={seeRef3 ? 'show' : 'hiddenRight'}>
                 <Image/>
                 <Image2 src={selfie}/>
             </Selfie>
