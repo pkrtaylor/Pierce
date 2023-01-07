@@ -134,7 +134,7 @@ const SideBar = ({toggle, isOpen}) => {
                 activeClass='active'
                 onClick={toggle}>About</SideBarLink>
                 <SideBarLink 
-                to='experince'
+                to='experience'
                 smooth={true}
                 duration={500}
                 spy={true}
