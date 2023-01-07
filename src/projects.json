@@ -3,7 +3,7 @@
         "id": "0",
         "name" : "Dev-Connector",
         "img" : "",
-        "desc" : "The application was made with the idea to mimic a form of social media. The theme chosen for this was a place for developers to connect. A user can create posts, make comments and look at list of other developers.",
+        "desc" : "The application was made with the idea to mimic a form of social media. The theme chosen for this was a place for developers to connect. A user can create posts, direct message others, make comments and look at list of other developers.",
         "tools": ["React", "Node", "Express", "Redux", "MongoDB"],
         "slides": [
             {"url" : "../images/DC1_3.png", "title": "DC1_3"},
@@ -19,7 +19,7 @@
         "id": "1",
         "name" : "NFT Claim Site",
         "img" : "",
-        "desc" : "This is small application that allows customers who have purchased clothing from the TribeMarket x Ajar collab, to claim an NFT of that item. ",
+        "desc" : "This is a small application that allows customers who have purchased clothing from the TribeMarket x Ajar collab, to claim an NFT of that item. ",
         "tools": ["React", "Third Web","Openzepellin", "Figma" ],
         "slides": [
             {"url" : "../images/TMNYC1_2.png", "title": "TMNYC1_2"},
@@ -34,7 +34,7 @@
         "id": "2",
         "name" : "Guess My Number",
         "img" : "",
-        "desc" : "This is small game created by utilizing react native. Once a user enters the game screen, they must enter a number and the computer must then guess the correct number. The user guides the computer by telling it, if it should guess lower or higher.",
+        "desc" : "This is a small game created by utilizing react native. Once a user enters the game screen, they must enter a number and the computer must then guess the correct number. The user guides the computer by telling it, if it should guess lower or higher.",
         "tools": ["React native", "ExpoGo"],
         "slides": [
             {"url" : "../images/GMN1_2.png", "title": "GMN1_2"},
