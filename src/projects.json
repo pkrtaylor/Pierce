@@ -1,6 +1,21 @@
-[
+    [{
+        "id": "1",
+        "name" : "Bird App",
+        "img" : "",
+        "desc" : "The application is an attempt to create a lite version of twitter.",
+        "tools": ["NextJs", "Django", "Posgresql", "Redux", "Redis", "Google Cloud"],
+        "slides": [
+            {"url" : "../images/mockt1.png", "title": "DC1_3"},
+            {"url" : "../images/mockt2.png", "title": "DC2"},
+            {"url" : "../images/mockt3.png", "title": "DC3"},
+            {"url" : "../images/mockt4.png", "title": "DC4"}
+        ],
+        "github" : "https://github.com/pkrtaylor/bird-app",
+        "elink" : "https://birdapp-inky.vercel.app/"
+        
+    },
     {
-        "id": "0",
+        "id": "1",
         "name" : "Dev-Connector",
         "img" : "",
         "desc" : "The application was made with the idea to mimic a form of social media. The theme chosen for this was a place for developers to connect. A user can create posts, direct message others, make comments and look at list of other developers.",
@@ -16,7 +31,7 @@
         
     },
     {
-        "id": "1",
+        "id": "2",
         "name" : "NFT Claim Site",
         "img" : "",
         "desc" : "This is a small application that allows customers who have purchased clothing from the TribeMarket x Ajar collab, to claim an NFT of that item. ",
@@ -31,7 +46,7 @@
 
     },
     {
-        "id": "2",
+        "id": "3",
         "name" : "Guess My Number",
         "img" : "",
         "desc" : "This is a small game created by utilizing react native. Once a user enters the game screen, they must enter a number and the computer must then guess the correct number. The user guides the computer by telling it, if it should guess lower or higher.",

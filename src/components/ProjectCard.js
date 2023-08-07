@@ -60,11 +60,11 @@ const Description = styled.div`
 `
 
 const ProjectName = styled.h2`
-    color: #ccd6f6;
+    color: #FF0000;
     margin-bottom: 25px;
     cursor: pointer;
     &:hover{
-        color: #FF0000;
+        color: #911c1c;
         transition: .5s ease-in-out;
     }
 
@@ -79,7 +79,7 @@ const Desc = styled.p`
 `
 
 const Tools = styled.ul`
-    color: #a8b2d1;
+    color: #FF0000;
     list-style: none;
     display: flex;
     margin-top: 25px;

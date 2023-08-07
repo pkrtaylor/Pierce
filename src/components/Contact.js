@@ -7,11 +7,12 @@ const Container = styled.section`
 
   height: 700px;
   
-  background-color: #0a192f;
+  
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Play', sans-serif;
+  margin: 0;
 
 `
 
@@ -29,7 +30,7 @@ const Wrapper = styled.div`
 
 const Heading =styled.h2`
 
-  color: #ccd6f6;
+  
   font-size: 45px;
   margin-bottom: 10px;
 

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const Container = styled.footer`
 
   height: 50px;
-  background-color: #0a192f;
+  
   display: flex;
   justify-content: center;
   align-items: center;

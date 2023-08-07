@@ -8,9 +8,9 @@ const Container = styled.section`
 
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(10, 25, 47);
+  
   display: flex;
-  justify-content: center;
+  
   align-items: center;
   overflow: hidden;
   font-family: 'Play', sans-serif;
@@ -39,7 +39,7 @@ const Top = styled.div`
  max-width: 540px;
  
  .header {
-  color: #ccd6f6;
+  
     margin-top: 10px;
     margin-bottom: 40px;
     font-size: 32px;
@@ -245,6 +245,8 @@ const About = () => {
                 <li>React Native</li>
                 <li>Redux</li>
                 <li>ThirdWeb</li>
+                <li>Django</li>
+                <li>Postgresql</li>
               </ul>
               </PassageInner>
             </PassageContainer>

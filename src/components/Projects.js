@@ -7,9 +7,9 @@ import projects from '../projects.json'
 
 const Container = styled.section`
     min-height: 100vh;
-    background-color: #0a192f;
+    
     display: flex;
-    justify-content: center;
+    
     font-family: 'Play', sans-serif;
     
 `
@@ -35,7 +35,7 @@ const Top =  styled.div`
 
 const Header = styled.h2`
 
-    color: #ccd6f6;
+    
     margin-top: 10px;
     margin-bottom: 40px;
     font-size: 32px;
@@ -49,7 +49,7 @@ const Header = styled.h2`
         flex: 1;
         margin-left: 1rem;
         height: 1px;
-        background: #ccd6f6
+        background: #233554
     }
     @media screen and (max-width: 800px){
         

@@ -7,9 +7,9 @@ import { useInView } from 'react-intersection-observer';
 const Container = styled.section`
 
   min-height: 800px;
-  background-color: #0a192f ;
+  
   display: flex;
-  justify-content: center;
+ 
   font-family: 'Play', sans-serif;
 
 `
@@ -49,7 +49,7 @@ const Bottom = styled.div`
 
 const Heading = styled.h2`
 
-    color: #ccd6f6;
+    
     margin-top: 10px;
     margin-bottom: 40px;
     font-size: 32px;
@@ -184,7 +184,7 @@ const RightB = styled.div`
 
 const Header = styled.h3`
 
-  color: #ccd6f6 ;
+  color: #233554 ;
   margin-bottom: 10px;
 
   span{

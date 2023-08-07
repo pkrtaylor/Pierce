@@ -10,7 +10,7 @@ const dash = keyframes`
 
 
 const MainContainer = styled.div`
-  background-color: #0a192f;
+  
   min-height: 100vh;
   display: flex;
   justify-content: center;

@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import { useInView } from 'react-intersection-observer';
 import Typewriter from 'typewriter-effect'
 
-const Container = styled.div`
+const Container = styled.section`
 
     min-height: 100vh;
     
     
-    background-color: #0a192f;
+    
     display: flex;
-    justify-content: center;
+    
     align-items: center;
     
 
@@ -20,7 +20,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
 
   width: 900px;
-  padding: 0px 20px 0px 20px ;
+  
   display: flex;
   flex-direction: column;
   
@@ -33,7 +33,7 @@ const Wrapper = styled.div`
   }
 
   .secondLine{
-    color: #ccd6f6;
+    
     font-weight: 600;
     font-size: clamp(40px,8vw,80px);
     line-height: 1.1;
