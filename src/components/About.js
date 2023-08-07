@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import selfie from '../images/selfie_2.png'
+import selfie from '../images/newSelfie.jpg'
 import { useInView } from 'react-intersection-observer';
 
 
@@ -195,6 +195,7 @@ const Image2 = styled.img`
     position: absolute;
     margin-top: 25px;
     object-fit: cover;
+    object-position: top;
     margin-left: 50px;
     
     
@@ -252,7 +253,7 @@ const About = () => {
             </PassageContainer>
             <Selfie ref={ref3} className={seeRef3 ? 'show' : 'hiddenRight'}>
                 <Image/>
-                <Image2 src={selfie}/>
+                <Image2 alt='' src={selfie}/>
             </Selfie>
           </Bottom>
       </Wrapper>
