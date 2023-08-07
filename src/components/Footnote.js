@@ -30,7 +30,7 @@ const Footnote = () => {
     <Container>
     <a href='https://github.com/pkrtaylor/Pierce' rel='noopener noreferrer' target="_blank">
       <Text clas>
-      Designed & Built by Pierce Ruddock Taylor
+      Designed & Built with React by Pierce Ruddock Taylor
       </Text>
     </a>  
     </Container>
