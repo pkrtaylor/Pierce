@@ -23,6 +23,9 @@ const Wrapper = styled.div`
   
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 800px) {
+    padding-left: 10px;
+  }
   
   .firstLine{
     color: #FF0000 ;

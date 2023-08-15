@@ -64,4 +64,10 @@ section {
   }
 }
 
+@media (max-width: 800px) {
+  section{
+    justify-content: center;
+    margin-left: 0px;
+  }
+}
 
